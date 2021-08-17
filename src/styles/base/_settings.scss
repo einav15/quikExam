@@ -1,0 +1,9 @@
+@mixin mobile {
+  @media (max-width: 750px) {
+    @content;
+  }
+}
+$lightGray: #e9e9e9;
+$gray: #cecece;
+$blue: #8bbbd8;
+$lightBlue: #9bd5e379;

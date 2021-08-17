@@ -1,0 +1,39 @@
+.products{
+    display: flex;
+    justify-content: center;
+    .products__list{
+        max-width: 1500px;
+        padding: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 15rem;
+        @include mobile{
+            margin-bottom: 20rem;
+
+        }
+    }
+
+}
+
+
+
+
+.product-info__price{
+    position: relative;
+    .reg-price{
+        color: $gray;
+        text-decoration: line-through;
+    }
+    .sale-price{
+        color: black;
+        text-decoration: none;
+    }
+    .sale-text{
+        position: absolute;
+        right: 3rem;
+        top: 0;
+        direction: rtl;
+        color: red;
+    }
+}

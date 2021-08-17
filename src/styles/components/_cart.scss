@@ -1,0 +1,105 @@
+.cart{
+    display: flex;
+    justify-content: flex-end;
+    direction: rtl;
+    width: 100%;
+    height: 12rem;
+    background: $blue;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+    @include mobile{
+        flex-direction: column-reverse;
+        align-items: center;
+        height: 20rem;
+    }
+    .sales-used__container{
+        width: 100%;
+        overflow-y: auto;
+        margin-bottom: 1rem;
+        @include mobile{
+            margin-bottom: 0;
+        }
+    }
+    .cart__sales{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 5px;
+        align-items: flex-start;
+        background: #56a9fc;
+        border-right: 2px solid whitesmoke;
+        color: whitesmoke;
+        @include mobile{
+            width: 100%;
+            max-height: 6rem;
+            border-bottom: 2px solid whitesmoke;
+            padding-bottom: 0;
+        }
+        h5{
+            width: 100%;
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            border-bottom: 2px solid whitesmoke;
+            @include mobile{
+                width: auto;
+            }
+        }
+        .sales-used{
+            padding: 2px 0;
+            font-weight: 500;
+            font-size: 0.875rem;
+            border-bottom: 2px solid whitesmoke;
+            width: 100%;
+        }
+    }
+    .cart__items{
+        width: 73%;
+        padding-left: 1rem;
+        overflow-x: hidden;
+        @include mobile{
+            width: 100%;
+            padding: 1rem 0 0 0 ;
+        }
+        .cart-items__list{ 
+            height: 100%;
+            overflow-x: auto;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            direction: ltr;
+            .cart__product-container{
+                display: flex;
+                box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem;
+                margin: 0 0.5rem;
+                border-radius: 1rem;
+                position: relative;
+                @include mobile{
+                    margin: 0 0.5rem 0.5rem 0.5rem ;
+                }
+                img{
+                    width: 6rem;
+                    height: 97px;
+                    padding-bottom: 1rem;
+                } 
+                .remove-item{
+                    position: absolute;
+                    top: 0.5rem;
+                    right: 0.5rem;
+                    color: white;
+                    font-weight: 600;
+                    background: red;
+                    padding: 4px 9px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+            }
+        }
+    }  
+}

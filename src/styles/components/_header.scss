@@ -1,0 +1,41 @@
+header{
+    width: 100%;
+    display: flex;
+    box-shadow: 1px 1px 10px gray;
+    @include mobile {
+        flex-direction: column;
+    }
+    .header-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 75%;
+        padding: 8px;
+        background-color: white;
+        @include mobile {
+            width: auto;
+            height: 3rem;
+            font-size: 0.875rem;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        h4{
+            font-weight: 500;
+        }
+    }
+    .header-logo{
+        width: 25%;
+        background-color: rgb(86, 169, 252);
+        border-right: 2px solid black;
+        @include mobile {
+            width: auto;
+            border-right: none;
+            border-bottom: 2px solid black;
+        }
+        .logo{
+            height: 3rem;
+        }
+    }
+    
+}
+
